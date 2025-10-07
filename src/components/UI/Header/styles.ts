@@ -21,11 +21,20 @@ export const Inner = styled.div`
 `;
 
 export const LogoContainer = styled.div`
+  img {
+    width: 23.52% !important; /* 33.6% - 30% = 23.52% */
+    height: auto !important;
+  }
+
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    
+    img {
+      width: 25% !important;
+    }
   }
 `;
 
@@ -34,14 +43,19 @@ export const BurgerMenu = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    display: block;
-    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
 
     div {
       position: absolute;
-      background: var(--emerald);
-      width: '250px';
-      height: '300px';
+      background: var(--light-bordo);
+      width: 250px;
+      height: 300px;
       border-radius: 25px;
       z-index: 1;
       top: 50px;
@@ -50,6 +64,8 @@ export const BurgerMenu = styled.div`
     img {
       position: relative;
       z-index: 2;
+      width: 24px;
+      height: 24px;
       object-fit: cover;
     }
   }
@@ -58,9 +74,9 @@ export const BurgerMenu = styled.div`
 export const Nav = styled.div`
   display: flex;
   align-items: center;
-  gap: 3.75rem;
+  gap: 1.5rem;
   position: relative;
-  margin-right: -6.3rem;
+  margin-left: 0.5rem;
 
   a {
     color: var(--link-color);
@@ -69,17 +85,22 @@ export const Nav = styled.div`
   }
 
   @media (max-width: 768px) {
+    a {
+      color: var(--white);
+    }
+  }
+
+  @media (max-width: 768px) {
     position: absolute;
-    top: 60px;
+    top: 70px;
+    right: 20px;
     flex-direction: column;
     gap: 1rem;
-    align-items: flex-start;
-    right: 120px;
+    align-items: flex-end;
     z-index: 3;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-delay: 0.5s;
+    transition: all 0.3s ease;
 
     &.active {
       opacity: 1;
@@ -111,13 +132,12 @@ export const CallToActions = styled.div`
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 220px;
+    top: 200px;
+    right: 20px;
     z-index: 3;
-    right: 50px;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-delay: 0.5s;
+    transition: all 0.3s ease;
 
     &.active {
       opacity: 1;

@@ -1,21 +1,38 @@
 'use client';
 import { styled } from 'styled-components';
-import hero_background from '../../../../public/images/grid_background.png';
+import dolet3_background from '../../../../public/images/dolet3.jpg';
 
 export const Wrapper = styled.section`
-  margin-top: 6.25rem;
+  margin-top: 0;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const BackgroundImage = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(${dolet3_background.src}) no-repeat center center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: 1;
 `;
 
 export const Inner = styled.div`
-  background: url(${hero_background.src}) no-repeat;
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 56rem;
   margin: 0 auto;
   text-align: center;
-  background-position: top center;
-  background-size: contain;
+  padding: 2rem;
 `;
 
 export const Pill = styled.div`

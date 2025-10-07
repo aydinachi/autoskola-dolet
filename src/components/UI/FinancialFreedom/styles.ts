@@ -116,7 +116,7 @@ export const Title = styled.div`
 export const BriefNote = styled.div`
   max-height: 54.75rem;
   padding: 8.25rem 4.5rem;
-  background: var(--emerald);
+  background: var(--light-bordo);
 
   p {
     color: var(--Background, #070606);

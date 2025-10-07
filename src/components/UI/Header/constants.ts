@@ -23,14 +23,14 @@ export const menu = {
 export const links = [
   {
     url: '/',
-    linkTo: 'Solutions',
+    linkTo: 'Početna',
+  },
+  {
+    url: '/online-ucenje',
+    linkTo: 'Online učenje',
   },
   {
     url: '/',
-    linkTo: 'Learn',
-  },
-  {
-    url: '/',
-    linkTo: 'About',
+    linkTo: 'O nama',
   },
 ];

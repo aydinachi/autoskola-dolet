@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Edge, Edges, Title } from '../FinancialFreedom/styles';
 import lola_card from '../../../../public/images/lola_card.png';
 import orange_card from '../../../../public/images/orange_card.png';
-import terry_card from '../../../../public/images/terry_card.png';
+
 import {
   Wrapper,
   Inner,
@@ -33,7 +33,7 @@ const IntroSection = () => {
     <Wrapper>
       <Inner>
         <Header>
-          <h3>Introducing</h3>
+          <h3>Cijena Obuke</h3>
           <HeaderMainText>
             {isMobile ? (
               <>
@@ -60,11 +60,7 @@ const IntroSection = () => {
             src={lola_card}
             alt="blue card"
           />
-          <RightImage
-            className={isHovered ? 'active' : ''}
-            src={terry_card}
-            alt="terry card"
-          />
+        
         </CardsContainer>
         <Edges>
           {edges.map((edge, i) => (

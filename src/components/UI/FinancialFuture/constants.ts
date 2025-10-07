@@ -1,57 +1,57 @@
-import ic_money_send from '../../../../public/svgs/ic_money_send.svg';
-import ic_wallet_minus from '../../../../public/svgs/ic_wallet_minus.svg';
+import ic_security from '../../../../public/svgs/ic_security.svg';
+import ic_success from '../../../../public/svgs/ic_success.svg';
 export const cardsInfo = [
   {
-    title: 'Spend Better',
+    title: 'Postanite sigurni za volanom',
     details:
-      'Set and achieve financial goals with ease, automate your savings, and watch your money grow without the stress.',
-    icon: ic_money_send,
+      'Kroz praktičnu i prilagođenu obuku, stječete samopouzdanje i vještine potrebne za sigurnu vožnju u svim situacijama.',
+    icon: ic_security,
   },
   {
-    title: 'Invest Better',
+    title: 'Znanje koje vas vodi do uspjeha',
     details:
-      'Set and achieve financial goals with ease, automate your savings, and watch your money grow without the stress.',
-    icon: ic_wallet_minus,
+      'Teorijska nastava kod nas nije samo učenje napamet — ona vas priprema za stvarne situacije na cesti.',
+    icon: ic_success,
   },
 ];
 
 export const stats = [
   {
-    number: '50+',
-    subtitle: 'cities',
+    number: '90%',
+    subtitle: 'prolaznost',
   },
   {
-    number: '50,000+',
-    subtitle: 'transactions',
+    number: '500+',
+    subtitle: 'polaznika',
   },
   {
-    number: '3M+',
-    subtitle: 'users',
+    number: '1K+',
+    subtitle: 'korisnika',
   },
   {
     number: '5+',
-    subtitle: 'user ratings',
+    subtitle: 'ocjena',
   },
 ];
 
 // For desktop
 export const desktopHeaderPhrase = [
-  'Confidently Shape Your',
-  'Financial Future',
+  'Sigurno oblikujte svoju',
+  'vozačku budućnost',
 ];
 export const desktopParagraphPhrase = [
-  'At RAFT, we empower you to confidently shape your financial future. Our modern',
-  'approach simplifies saving and investing, making it easier than ever.',
+  'U AutoŠkoli Dolet, omogućavamo vam da sigurno oblikujete svoju vozačku budućnost. Naš moderni',
+  'pristup pojednostavljuje učenje i vožnju, čineći to lakšim nego ikad.',
 ];
 
 // For mobile
 export const mobileHeaderPhrase = [
-  'Confidently Shape',
-  ' Your Financial Future',
+  'Sigurno oblikujte',
+  'svoju vozačku budućnost',
 ];
 export const mobileParagraphPhrase = [
-  'At RAFT, we empower you to confidently shape',
-  'your financial future. Our modern approach',
-  'simplifies saving and investing, making it easier',
-  'than ever.',
+  'U AutoŠkoli Dolet, omogućavamo vam da sigurno oblikujete',
+  'svoju vozačku budućnost. Naš moderni pristup', 
+  'pojednostavljuje učenje i vožnju, čineći to lakšim',
+  'nego ikad.',
 ];

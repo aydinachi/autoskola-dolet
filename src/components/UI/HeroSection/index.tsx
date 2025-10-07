@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Wrapper, Inner, Pill, HeroTextContainer } from './styles';
+import { Wrapper, BackgroundImage, Inner, Pill, HeroTextContainer } from './styles';
 import ic_chevron_right from '../../../../public/svgs/ic_chevron_right.svg';
 import { GetStartedButton } from '@/components';
 import MaskText from '@/components/Common/MaskText';
@@ -16,9 +16,10 @@ const HeroSection = () => {
   const isMobile = useIsMobile();
   return (
     <Wrapper>
+      <BackgroundImage />
       <Inner>
         <Pill>
-          <span>Introducing Raft cards</span>
+          <span>Auto Škola Dolet</span>
           <Image src={ic_chevron_right} alt="chevron-right" />
         </Pill>
         <HeroTextContainer>

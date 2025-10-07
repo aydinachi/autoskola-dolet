@@ -1,0 +1,24 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="150" fill="#1a1a1a"/>
+  
+  <!-- Simple car icon -->
+  <rect x="60" y="70" width="80" height="30" rx="15" fill="#8B0000"/>
+  <rect x="70" y="80" width="60" height="20" rx="10" fill="#A52A2A"/>
+  
+  <!-- Wheels -->
+  <circle cx="75" cy="100" r="8" fill="#333"/>
+  <circle cx="125" cy="100" r="8" fill="#333"/>
+  
+  <!-- Windshield -->
+  <rect x="70" y="80" width="60" height="15" rx="3" fill="#87CEEB" opacity="0.7"/>
+  
+  <!-- Headlights -->
+  <circle cx="65" cy="85" r="4" fill="#FFD700"/>
+  <circle cx="135" cy="85" r="4" fill="#FFD700"/>
+  
+  <!-- Steering wheel -->
+  <circle cx="100" cy="90" r="6" stroke="#fff" stroke-width="2" fill="none"/>
+  <line x1="100" y1="84" x2="100" y2="96" stroke="#fff" stroke-width="1"/>
+  <line x1="94" y1="90" x2="106" y2="90" stroke="#fff" stroke-width="1"/>
+</svg>

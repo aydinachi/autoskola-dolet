@@ -3,39 +3,38 @@ import ic_identification from '../../../../public/svgs/ic_identification.svg';
 import ic_lock_closed from '../../../../public/svgs/ic_lock_closed.svg';
 
 // For desktop
-export const desktopHeaderPhrase = ["Introducing RAFT's Next-", 'Gen Cards'];
+export const desktopHeaderPhrase = ["Vaša vozačka dozvola po fer cijeni",];
 export const desktopParagraphPhrase = [
-  " Discover RAFT's latest innovation – our new cards. Elevate your banking",
-  'experience with cutting-edge features, security, and unprecedented',
-  'convenience.',
+  "Cijena obuke: 1500 KM",
+  'Platite odjednom ili u više rata, bez dodatnih naknada.',
+  'Transparentno, sigurno i prilagođeno vašem budžetu.',
 ];
 
 // For mobile
-export const mobileHeaderPhrase = ["Introducing RAFT's", 'Next-Gen Cards'];
+export const mobileHeaderPhrase = ["Vaša vozačka dozvola po fer cijeni",];
 export const mobileParagraphPhrase = [
-  " Discover RAFT's latest innovation – our new cards.",
-  ' Elevate your banking experience with cutting-edge',
-  'features, security, and unprecedented',
-  'convenience.',
+  "Cijena obuke: 1500 KM",
+  'Platite odjednom ili u više rata, bez dodatnih naknada.',
+  'Transparentno, sigurno i prilagođeno vašem budžetu.',
 ];
 
 export const edges = [
   {
-    point: 'Contactless Technology',
+    point: 'Teorijska obuka',
     details:
-      'Our new cards come equipped with contactless technology, allowing you to make swift, secure payments with a simple tap.',
+      'Naši novi kursevi dolaze opremljeni sa najnovijim metodama teorijske obuke, omogućavajući vam brzo i sigurno učenje sa jednostavnim pristupom.',
     icon: ic_document_duplicate,
   },
   {
-    point: 'Personalization',
+    point: 'Personalizovana obuka',
     details:
-      'Customize your card to reflect your unique style. Choose from a range of designs that suit your personality.',
+      'Prilagodite svoju obuku da odražava vaš jedinstveni stil učenja. Biramo između niza pristupa koji odgovaraju vašoj ličnosti.',
     icon: ic_identification,
   },
   {
-    point: 'Enhanced Security',
+    point: 'Povećana sigurnost',
     details:
-      'Your peace of mind is our priority. Our cards feature advanced security measures to protect your transactions and data.',
+      'Vaša sigurnost je naš prioritet. Naši kursevi sadrže napredne sigurnosne mere za zaštitu vašeg učenja i podataka.',
     icon: ic_lock_closed,
   },
 ];

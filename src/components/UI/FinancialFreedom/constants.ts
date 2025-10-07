@@ -1,56 +1,56 @@
 
 import ic_banknotes from '../../../../public/svgs/ic_banknotes.svg';
-import ic_circle_stack from '../../../../public/svgs/ic_circle_stack.svg';
-import ic_arrows_left_right from '../../../../public/svgs/ic_arrows_right_left.svg';
+import ic_clock from '../../../../public/svgs/ic_clock.svg';
+import ic_speedometer from '../../../../public/svgs/ic_speedometer.svg';
 
 // For desktop
-export const desktopHeaderPhrase = ['Your Financial Freedom,', 'Your Way'];
+export const desktopHeaderPhrase = ['Sloboda na cesti počinje s nama',];
 export const desktopParagraphPhrase = [
-  'We believe that managing your finances should be effortless and cost-effective.',
-  "That's why we offer you the freedom you deserve.",
+  'Vjerujemo da polaganje vozačkog ispita treba biti jednostavno i pristupačno.',
+  'Zato vam nudimo slobodu koju zaslužujete.',
 ];
 export const desktopBriefNotePhrase = [
-  'Smart investments,',
-  'secure payments, and',
-  'expert guidance, all in',
-  'one place.',
+  'Pametna obuka,',
+  'sigurna vožnja, i',
+  'stručno vodstvo, sve na',
+  'jednom mjestu.',
 ];
 
 // For mobile
-export const mobileHeaderPhrase = ['Your Financial', 'Freedom, Your Way'];
+export const mobileHeaderPhrase = ['Sloboda na cesti počinje s nama.',];
 export const mobileParagraphPhrase = [
-  'We believe that managing your finances should be',
-  "effortless and cost-effective. That's why we offer",
-  ' you the freedom you deserve.',
+  'Vjerujemo da polaganje vozačkog ispita treba biti',
+  'jednostavno i pristupačno. Zato vam nudimo',
+  ' slobodu koju zaslužujete.',
 ];
 
 export const mobileBriefNotePhrase = [
-  'Smart',
-  ' investments,',
-  'secure',
-  ' payments,',
-  'and expert',
-  'guidance, all',
-  'in one place.',
+  'Pametna',
+  ' obuka,',
+  'sigurna',
+  ' vožnja,',
+  'i stručno',
+  'vodstvo, sve',
+  'na jednom mjestu.',
 ];
 
 export const edges = [
   {
-    point: 'No minimum balance fees',
+    point: 'Bez skrivenih troškova',
     details:
-      'Say goodbye to minimum balance fees. Your account, your balance—no hidden charges',
+      'Recite zbogom skrivenim troškovima. Vaš kurs, vaša cijena—bez dodatnih naplata',
     icon: ic_banknotes,
   },
   {
-    point: 'No monthly fees',
+    point: 'Bez stresa oko termina',
     details:
-      'Bank with us without worrying about monthly fees. Keep more of your money where it belongs—in your account',
-    icon: ic_circle_stack,
+      'Uskladite obuku s vašim rasporedom. Fleksibilni termini i jednostavne promjene.',
+    icon: ic_clock,
   },
   {
-    point: 'No bank transfer fees',
+    point: 'Bez nepotrebnih čekanja',
     details:
-      'Seamlessly transfer funds without the extra cost. Send and receive money with zero bank transfer fees.',
-    icon: ic_arrows_left_right,
+      'Polaganje kod nas teče brzo i organizovano. Zaboravite na liste čekanja i izgubljeno vrijeme.',
+    icon: ic_speedometer,
   },
 ];

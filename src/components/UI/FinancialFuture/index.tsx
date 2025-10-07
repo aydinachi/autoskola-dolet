@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
-import future_banner from '../../../../public/images/future_banner.png';
-import future_mobile_banner from '../../../../public/images/future_mobile_banner.png';
+import future_banner from '../../../../public/images/doletbordo.jpg';
+import future_mobile_banner from '../../../../public/images/znak-1.jpg';
 import {
   Wrapper,
   Inner,
@@ -52,7 +52,7 @@ const FinancialFuture = () => {
                 <MaskText phrases={new Array(info.details)} tag="p" />
               </TextCtn>
               <SVGCtn>
-                <Image src={info.icon} alt="icon" />
+                <Image src={info.icon} alt="icon" width={128} height={128} />
               </SVGCtn>
             </Card>
           ))}

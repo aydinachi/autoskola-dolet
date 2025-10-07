@@ -12,34 +12,34 @@ export type Props = {
 export const testimonials = [
   {
     testimony:
-      "RAFT has transformed my approach to finance. Their smart investing options have helped me grow my wealth, and their user-friendly platform makes managing my money a breeze. I've never felt more confident about my financial future.",
-    person: 'Robert Fox',
+      "AutoŠkola Dolet je transformisala moj pristup vožnji. Njihove pametne opcije obuke su mi pomogle da razvijem svoje vozačke vještine, a njihova platforma čini upravljanje obukom jednostavnim. Nikad se nisam osjećao sigurnije u svoju vozačku budućnost.",
+    person: 'Amar P.',
     avatar: robert_fox,
   },
   {
     testimony:
-      "I can't express how grateful I am to RAFT. Their wealth management services have been a game-changer for my family's financial security. The expert guidance and personalized strategies have given us peace of mind, knowing that our future is in capable hands.",
-    person: 'Cameron Williamson',
+      "Ne mogu izraziti koliko sam zahvalan AutoŠkoli Dolet. Njihove usluge obuke su bile prekretnica za sigurnost moje porodice u saobraćaju. Stručno vodstvo i personalizovane strategije su nam dale mir, znajući da je naša budućnost u sposobnim rukama.",
+    person: 'Haris M.',
     avatar: cameron_williamson,
   },
   {
     testimony:
-      "RAFT's financial planning services have been a lifeline for me. I always struggled with managing my money, but their team crafted a tailored plan that addressed my goals and concerns. It's been a game-changer in achieving my financial dreams",
-    person: 'Esther Howard',
+      "Usluge planiranja obuke AutoŠkole Dolet su bile spas za mene. Uvijek sam se mučio sa učenjem vožnje, ali njihov tim je kreirao prilagođen plan koji je riješio moje ciljeve i brige. To je bila prekretnica u ostvarivanju mojih vozačkih snova",
+    person: 'Marko N.',
     avatar: esther_howard,
   },
   {
     testimony:
-      "I can't express how grateful I am to RAFT. Their wealth management services have been a game-changer for my family's financial security. The expert guidance and personalized strategies have given us peace of mind, knowing that our future is in capable hands.",
-    person: 'Cameron Williamson',
+      "Ne mogu izraziti koliko sam zahvalan AutoŠkoli Dolet. Njihove usluge obuke su bile prekretnica za sigurnost moje porodice u saobraćaju. Stručno vodstvo i personalizovane strategije su nam dale mir, znajući da je naša budućnost u sposobnim rukama.",
+    person: 'Hana S.',
     avatar: cameron_williamson,
   },
   {
     testimony:
-      "RAFT has transformed my approach to finance. Their smart investing options have helped me grow my wealth, and their user-friendly platform makes managing my money a breeze. I've never felt more confident about my financial future.",
-    person: 'Robert Fox',
+      "AutoŠkola Dolet je transformisala moj pristup vožnji. Njihove pametne opcije obuke su mi pomogle da razvijem svoje vozačke vještine, a njihova platforma čini upravljanje obukom jednostavnim. Nikad se nisam osjećao sigurnije u svoju vozačku budućnost.",
+    person: 'Edin D.',
     avatar: robert_fox,
   },
 ];
 
-export const desktopHeaderPhrase = ['Join over 3 million', 'members'];
+export const desktopHeaderPhrase = ['Pridružite se preko 500', 'polaznika'];

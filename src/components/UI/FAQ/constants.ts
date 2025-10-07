@@ -3,8 +3,8 @@ type FAQItem = {
   answer: string;
 };
 
-export const desktopHeaderPhrase = ['Frequently asked', 'questions'];
-export const mobileHeaderPhrase = ['Frequently', 'asked', 'questions'];
+export const desktopHeaderPhrase = ['Često postavljana', 'pitanja'];
+export const mobileHeaderPhrase = ['Često', 'postavljana', 'pitanja'];
 export const animate = {
   initial: {
     y: '100%',
@@ -19,23 +19,23 @@ export const animate = {
 
 export const faqData: FAQItem[] = [
   {
-    question: 'How do I create an account with RAFT?',
+    question: 'Kako se upisujem u AutoŠkolu Dolet?',
     answer:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      'Upis u AutoŠkolu Dolet je jednostavan - samo nas kontaktirajte telefonom ili dolazite direktno u našu kancelariju. Naš tim će vam pomoći sa svim potrebnim dokumentima.',
   },
   {
-    question: 'How does RAFT ensure the security of my financial data?',
+    question: 'Kako AutoŠkola Dolet osigurava sigurnost mojih podataka?',
     answer:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      'Vaša privatnost i sigurnost su naš prioritet. Svi vaši podaci su zaštićeni najnovijim sigurnosnim protokolima i nikad neće biti dijeljeni sa trećim stranama.',
   },
   {
-    question: 'What types of transactions can I perform with RAFT?',
+    question: 'Koje tipove obuke pruža AutoŠkola Dolet?',
     answer:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      'Pružamo kompletnu obuku za sve kategorije vozila - od teorijske obuke do praktične vožnje. Naši iskusni instruktori će vas pripremiti za uspješno polaganje ispita.',
   },
   {
-    question: 'What benefits does RAFT offer for wealth management?',
+    question: 'Koje prednosti nudi AutoŠkola Dolet za upravljanje obukom?',
     answer:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+      'Naša autoškola nudi fleksibilno planiranje sati, personalizovane pristupe učenju, i najbolje instruktore u gradu. Garantujemo vam najbolje rezultate.',
   },
 ];

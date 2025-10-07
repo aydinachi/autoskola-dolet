@@ -3,8 +3,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Raft',
-  description: 'Building the future of banking',
+  title: 'AutoŠkola Dolet - Polaganje vozačkog ispita',
+  description: 'AutoŠkola Dolet - vaš partner za uspješno polaganje vozačkog ispita. Profesionalna obuka, iskusni instruktori, najbolji rezultati.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="bs">
       <body>
         <Layout>{children}</Layout>
       </body>

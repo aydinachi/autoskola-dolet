@@ -1,47 +1,47 @@
-import seamless_payments from '../../../../public/images/seamless_payments.png';
-import smart_investing from '../../../../public/images/smart_investing.png';
-import wealth_management from '../../../../public/images/wealth_management.png';
-import financial_planning from '../../../../public/images/financial_planning.png';
+import theory_education from '../../../../public/images/theory_education.svg';
+import practical_driving from '../../../../public/images/practical_driving.svg';
+import driving_instructor from '../../../../public/images/driving_instructor.svg';
+import exam_preparation from '../../../../public/images/exam_preparation.svg';
 // For desktop
 export const desktopHeaderPhrases = [
-  'Elevate Your Financial',
-  'Journey with RAFT',
+  'Unaprijedite svoje vozačko',
+  'znanje sa AutoŠkolom Dolet',
 ];
 export const desktopParagraphPhrase = [
-  'RAFT offers a world of financial possibilities. From investments to payments,',
-  "we've got you covered. Join us and unlock your potential today.",
+  'AutoŠkola Dolet nudi svijet vozačkih mogućnosti. Od teorijske obuke do praktične vožnje,',
+  'mi smo tu za vas. Pridružite nam se i otključajte svoj potencijal danas.',
 ];
 
 // For mobile
 export const mobileParagraphPhrase = [
-  'RAFT offers a world of financial possibilities. From',
-  "investments to payments, we've got you covered.",
-  'Join us and unlock your potential today.',
+  'AutoŠkola Dolet nudi svijet vozačkih mogućnosti. Od',
+  'teorijske obuke do praktične vožnje, mi smo tu za vas.',
+  'Pridružite nam se i otključajte svoj potencijal danas.',
 ];
 
 export const offers = [
   {
-    illustration: seamless_payments,
-    title: 'Seamless Payments',
+    illustration: theory_education,
+    title: 'Teorijska obuka',
     details:
-      'Enjoy secure, seamless transactions that make managing your money a breeze.',
+      'Uživajte u sigurnoj, besprijekornoj teorijskoj obuci koja čini učenje pravila saobraćaja jednostavnim.',
   },
   {
-    illustration: smart_investing,
-    title: 'Smart Investing',
+    illustration: practical_driving,
+    title: 'Praktična vožnja',
     details:
-      'Grow your wealth confidently with our personalized investment solutions, tailored to your financial goals.',
+      'Razvijajte svoje vozačke vještine sa pouzdanjem sa našim personalizovanim rješenjima obuke, prilagođenim vašim ciljevima.',
   },
   {
-    illustration: wealth_management,
-    title: 'Wealth Management',
+    illustration: driving_instructor,
+    title: 'Stručni instruktori',
     details:
-      'Make informed decisions for your financial future with our wealth management expertise.',
+      'Donosite informirane odluke za svoju vozačku budućnost sa našim stručnim znanjem upravljanja obukom.',
   },
   {
-    illustration: financial_planning,
-    title: 'Financial Planning',
+    illustration: exam_preparation,
+    title: 'Priprema za ispit',
     details:
-      'Achieve your financial dreams with our comprehensive financial planning services, guiding you toward a secure future.',
+      'Ostvarite svoje vozačke snove sa našim sveobuhvatnim uslugama planiranja obuke, vodeći vas prema sigurnoj budućnosti.',
   },
 ];
