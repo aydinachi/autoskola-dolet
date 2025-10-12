@@ -40,7 +40,7 @@ export const desktopHeaderPhrase = [
   'vozačku budućnost',
 ];
 export const desktopParagraphPhrase = [
-  'U AutoŠkoli Dolet, omogućavamo vam da sigurno oblikujete svoju vozačku budućnost. Naš moderni',
+  'U auto školi Dolet, omogućavamo vam da sigurno oblikujete svoju vozačku budućnost. Naš moderni',
   'pristup pojednostavljuje učenje i vožnju, čineći to lakšim nego ikad.',
 ];
 

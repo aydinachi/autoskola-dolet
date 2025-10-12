@@ -3,8 +3,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AutoŠkola Dolet - Polaganje vozačkog ispita',
-  description: 'AutoŠkola Dolet - vaš partner za uspješno polaganje vozačkog ispita. Profesionalna obuka, iskusni instruktori, najbolji rezultati.',
+  title: 'auto škola Dolet - Polaganje vozačkog ispita',
+  description: 'auto škola Dolet - vaš partner za uspješno polaganje vozačkog ispita. Profesionalna obuka, iskusni instruktori, najbolji rezultati.',
 };
 
 export default function RootLayout({

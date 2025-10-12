@@ -1,1 +1,21 @@
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 80px; /* Compensate for fixed navbar */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Smaller padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 50px; /* Even smaller padding for small mobile */
+  }
+}

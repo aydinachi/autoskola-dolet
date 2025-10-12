@@ -1,4 +1,4 @@
-# AutoŠkola Dolet - Web stranica
+# auto škola Dolet - Web stranica
 
 Modern web stranica za AutoŠkolu Dolet, napravljena sa Next.js 13.5.4. Stranica sadrži informacije o polaganju vozačkog ispita, online učenje sa kviz funkcionalnosti, i potpuno je prilagođena za autoškolu.
 

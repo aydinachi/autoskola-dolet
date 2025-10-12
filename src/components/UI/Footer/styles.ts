@@ -20,7 +20,7 @@ export const Inner = styled.main`
 
 export const FooterLogo = styled.div`
   img {
-    width: 48% !important;
+    width: 19.2% !important;
     height: auto !important;
   }
 

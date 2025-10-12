@@ -4,6 +4,7 @@ import {
   Wrapper,
   Inner,
   Header,
+  SectionLabel,
   Offers,
   OfferCard,
   ImageCtn,
@@ -24,6 +25,7 @@ const OffersSection = () => {
     <Wrapper>
       <Inner>
         <Header>
+          <SectionLabel>O nama</SectionLabel>
           <MaskText phrases={desktopHeaderPhrases} tag="h1" />
 
           {isMobile ? (

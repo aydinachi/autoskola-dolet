@@ -1,4 +1,4 @@
-# AutoŠkola Dolet - Deployment Guide
+# auto škola Dolet - Deployment Guide
 
 ## 🚀 Aplikacija je spremna za deployment!
 

@@ -9,7 +9,7 @@ import ic_copyright from '../../../../public/svgs/ic_copyright.svg';
 const linksArr = [
   {
     title: 'O nama',
-    links: ['Naša autoškola', 'Karijere', 'Medijski paketi'],
+    links: ['Naša auto škola', 'Karijere', 'Medijski paketi'],
   },
   {
     title: 'Pravno',
@@ -44,7 +44,7 @@ const Footer = () => {
     <Wrapper>
       <Inner>
         <FooterLogo>
-          <Image src={dolet_logo} alt="AutoŠkola Dolet logo" />
+          <Image src={dolet_logo} alt="auto škola Dolet logo" />
         </FooterLogo>
         <FooterMainContent>
           <FooterMiddle>
@@ -80,7 +80,7 @@ const Footer = () => {
             </Translator>
             <CopyRight>
               <Image src={ic_copyright} alt="copyright svg" />
-              AutoŠkola Dolet, 2024.
+              auto škola Dolet, 2024.
             </CopyRight>
           </FooterBottom>
         </FooterMainContent>

@@ -12,7 +12,7 @@ export type Props = {
 export const testimonials = [
   {
     testimony:
-      "AutoŠkola Dolet je transformisala moj pristup vožnji. Njihove pametne opcije obuke su mi pomogle da razvijem svoje vozačke vještine, a njihova platforma čini upravljanje obukom jednostavnim. Nikad se nisam osjećao sigurnije u svoju vozačku budućnost.",
+      "Auto škola Dolet je transformisala moj pristup vožnji. Njihove pametne opcije obuke su mi pomogle da razvijem svoje vozačke vještine, a njihova platforma čini upravljanje obukom jednostavnim. Nikad se nisam osjećao sigurnije u svoju vozačku budućnost.",
     person: 'Amar P.',
     avatar: robert_fox,
   },
@@ -36,7 +36,7 @@ export const testimonials = [
   },
   {
     testimony:
-      "AutoŠkola Dolet je transformisala moj pristup vožnji. Njihove pametne opcije obuke su mi pomogle da razvijem svoje vozačke vještine, a njihova platforma čini upravljanje obukom jednostavnim. Nikad se nisam osjećao sigurnije u svoju vozačku budućnost.",
+      "Auto škola Dolet je transformisala moj pristup vožnji. Njihove pametne opcije obuke su mi pomogle da razvijem svoje vozačke vještine, a njihova platforma čini upravljanje obukom jednostavnim. Nikad se nisam osjećao sigurnije u svoju vozačku budućnost.",
     person: 'Edin D.',
     avatar: robert_fox,
   },

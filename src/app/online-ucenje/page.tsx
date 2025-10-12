@@ -279,7 +279,7 @@ export default function OnlineUcenje() {
     return (
       <QuizContainer>
         <QuizHeader>
-          <h1>Online učenje - AutoŠkola Dolet</h1>
+          <h1>Online učenje - auto škola Dolet</h1>
         </QuizHeader>
         
         <ScoreCard>
@@ -310,7 +310,7 @@ export default function OnlineUcenje() {
         <BackButton href="/">
           ← Povratak na početnu
         </BackButton>
-        <h1>Online učenje - AutoŠkola Dolet</h1>
+        <h1>Online učenje - auto škola Dolet</h1>
         <p>Testirajte svoje znanje sa našim kviz pitanjima</p>
       </QuizHeader>
 

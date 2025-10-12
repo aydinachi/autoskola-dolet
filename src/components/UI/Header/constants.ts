@@ -1,36 +1,53 @@
 export const menu = {
   open: {
-    width: '250px',
-    height: '300px',
-    top: '-25px',
-    right: '-25px',
-    transition: { duration: 0.75, type: 'tween', ease: [0.76, 0, 0.24, 1] },
+    width: '280px',
+    height: '320px',
+    top: '50px',
+    right: '-20px',
+    opacity: 1,
+    transition: { 
+      duration: 0.4, 
+      type: 'tween', 
+      ease: [0.25, 0.46, 0.45, 0.94] 
+    },
   },
 
   closed: {
-    width: '55px',
-    height: '40px',
-    top: '0px',
-    right: '-4px',
+    width: '0px',
+    height: '0px',
+    top: '50px',
+    right: '-20px',
+    opacity: 0,
     transition: {
-      duration: 0.75,
-      delay: 0.35,
+      duration: 0.3,
       type: 'tween',
-      ease: [0.76, 0, 0.24, 1],
+      ease: [0.25, 0.46, 0.45, 0.94],
     },
   },
 };
 export const links = [
   {
-    url: '/',
+    url: '#pocetna',
     linkTo: 'Početna',
+  },
+  {
+    url: '#kursevi',
+    linkTo: 'O nama',
+  },
+  {
+    url: '#prednosti',
+    linkTo: 'Prednosti',
+  },
+  {
+    url: '#cijena',
+    linkTo: 'Cijena',
   },
   {
     url: '/online-ucenje',
     linkTo: 'Online učenje',
   },
   {
-    url: '/',
-    linkTo: 'O nama',
+    url: '/kontakt',
+    linkTo: 'Kontakt',
   },
 ];

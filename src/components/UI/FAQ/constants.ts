@@ -24,18 +24,18 @@ export const faqData: FAQItem[] = [
       'Upis u AutoŠkolu Dolet je jednostavan - samo nas kontaktirajte telefonom ili dolazite direktno u našu kancelariju. Naš tim će vam pomoći sa svim potrebnim dokumentima.',
   },
   {
-    question: 'Kako AutoŠkola Dolet osigurava sigurnost mojih podataka?',
+    question: 'Kako auto škola Dolet osigurava sigurnost mojih podataka?',
     answer:
       'Vaša privatnost i sigurnost su naš prioritet. Svi vaši podaci su zaštićeni najnovijim sigurnosnim protokolima i nikad neće biti dijeljeni sa trećim stranama.',
   },
   {
-    question: 'Koje tipove obuke pruža AutoŠkola Dolet?',
+    question: 'Koje tipove obuke pruža auto škola Dolet?',
     answer:
       'Pružamo kompletnu obuku za sve kategorije vozila - od teorijske obuke do praktične vožnje. Naši iskusni instruktori će vas pripremiti za uspješno polaganje ispita.',
   },
   {
-    question: 'Koje prednosti nudi AutoŠkola Dolet za upravljanje obukom?',
+    question: 'Koje prednosti nudi auto škola Dolet za upravljanje obukom?',
     answer:
-      'Naša autoškola nudi fleksibilno planiranje sati, personalizovane pristupe učenju, i najbolje instruktore u gradu. Garantujemo vam najbolje rezultate.',
+      'Naša auto škola nudi fleksibilno planiranje sati, personalizovane pristupe učenju, i najbolje instruktore u gradu. Garantujemo vam najbolje rezultate.',
   },
 ];

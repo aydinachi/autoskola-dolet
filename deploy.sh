@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# AutoŠkola Dolet - Deployment Script
-echo "🚗 AutoŠkola Dolet - Priprema za deployment..."
+# auto škola Dolet - Deployment Script
+echo "🚗 auto škola Dolet - Priprema za deployment..."
 
 # Clean previous builds
 echo "🧹 Čišćenje prethodnih build-ova..."

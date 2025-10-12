@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import future_banner from '../../../../public/images/doletbordo.jpg';
+import future_banner from '../../../../public/images/volan.webp';
 import future_mobile_banner from '../../../../public/images/znak-1.jpg';
 import {
   Wrapper,
@@ -10,7 +10,7 @@ import {
   Card,
   TextCtn,
   SVGCtn,
-  Stats,
+  Stats, 
   Stat,
   Banner,
 } from './styles';

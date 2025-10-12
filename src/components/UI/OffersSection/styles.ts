@@ -7,10 +7,31 @@ export const Wrapper = styled.section``;
 export const Inner = styled.div`
   max-width: 1440px;
   width: 90%;
-  margin: 12.38rem auto 0;
+  margin: 6rem auto 0;
 
   @media (max-width: 768px) {
-    margin-top: 6.44rem;
+    margin-top: 4rem;
+  }
+`;
+
+export const SectionLabel = styled.span`
+  display: inline-block;
+  background: linear-gradient(135deg, #8B0000 0%, #A52A2A 100%);
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 0.4rem 1.2rem;
+    margin-bottom: 0.8rem;
   }
 `;
 
@@ -21,7 +42,7 @@ export const Header = styled.header`
   gap: 1.5rem;
   text-align: center;
   max-width: 56rem;
-  margin: 0 auto 6.75rem;
+  margin: 0 auto 3rem;
 
   h1 {
     font-size: 4.75rem;

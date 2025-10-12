@@ -24,9 +24,9 @@ export const Span = styled(motion.span)`
   font-weight: 400;
 
   @media (max-width: 768px) {
-    color: var(--Background);
-    font-size: 1.5rem;
-    font-weight: 500;
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    font-weight: 400;
   }
 `;
 
