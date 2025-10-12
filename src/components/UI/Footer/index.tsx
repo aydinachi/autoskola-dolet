@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import dolet_logo from '../../../../public/images/dolet_logo.png';
 import qr_code from '../../../../public/svgs/qr_code.svg';
 import ic_google_playstore from '../../../../public/svgs/ic_google_playstore.svg';
@@ -8,16 +9,30 @@ import ic_copyright from '../../../../public/svgs/ic_copyright.svg';
 
 const linksArr = [
   {
-    title: 'O nama',
-    links: ['Naša auto škola', 'Karijere', 'Medijski paketi'],
+    title: 'Navigacija',
+    links: [
+      { name: 'Početna', url: '#pocetna' },
+      { name: 'O nama', url: '#kursevi' },
+      { name: 'Prednosti', url: '#prednosti' },
+      { name: 'Cijena', url: '#cijena' },
+      { name: 'Online učenje', url: '/online-ucenje' },
+      { name: 'Kontakt', url: '/kontakt' }
+    ],
   },
   {
     title: 'Pravno',
-    links: ['Uslovi korištenja', 'Politika privatnosti', 'O nama'],
+    links: [
+      { name: 'Uslovi korištenja', url: '#' },
+      { name: 'Politika privatnosti', url: '#' },
+      { name: 'O nama', url: '#o-nama' }
+    ],
   },
   {
     title: 'Kontakt',
-    links: ['Kontaktirajte nas', 'FAQ'],
+    links: [
+      { name: 'Kontaktirajte nas', url: '/kontakt' },
+      { name: 'FAQ', url: '#faq' }
+    ],
   },
 ];
 
@@ -66,7 +81,11 @@ const Footer = () => {
                   <h3>{l.title}</h3>
                   <LinksContainer>
                     {l.links.map((link, i) => (
-                      <li key={i}>{link}</li>
+                      <li key={i}>
+                        <Link href={link.url} style={{ textDecoration: 'none', color: 'inherit' }}>
+                          {link.name}
+                        </Link>
+                      </li>
                     ))}
                   </LinksContainer>
                 </GridColumn>
