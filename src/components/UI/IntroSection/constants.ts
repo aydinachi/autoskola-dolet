@@ -5,7 +5,7 @@ import ic_lock_closed from '../../../../public/svgs/ic_lock_closed.svg';
 // For desktop
 export const desktopHeaderPhrase = ["Vaša vozačka dozvola po fer cijeni",];
 export const desktopParagraphPhrase = [
-  "Cijena obuke: 1500 KM",
+  "Cijena obuke: 1485 KM",
   'Platite odjednom ili u više rata, bez dodatnih naknada.',
   'Transparentno, sigurno i prilagođeno vašem budžetu.',
 ];
@@ -13,7 +13,7 @@ export const desktopParagraphPhrase = [
 // For mobile
 export const mobileHeaderPhrase = ["Vaša vozačka dozvola po fer cijeni",];
 export const mobileParagraphPhrase = [
-  "Cijena obuke: 1500 KM",
+  "Cijena obuke: 1485 KM",
   'Platite odjednom ili u više rata, bez dodatnih naknada.',
   'Transparentno, sigurno i prilagođeno vašem budžetu.',
 ];
