@@ -99,7 +99,7 @@ const Footer = () => {
             </Translator>
             <CopyRight>
               <Image src={ic_copyright} alt="copyright svg" />
-              auto škola Dolet, 2024.
+              Auto škola Dolet, 2024.
             </CopyRight>
           </FooterBottom>
         </FooterMainContent>

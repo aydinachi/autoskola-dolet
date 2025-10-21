@@ -111,3 +111,67 @@ export const RightImage = styled(Image)`
     top: 60%;
   }
 `;
+
+export const PackageListContainer = styled.div`
+  width: 100%;
+  max-width: 800px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.05) 0%, rgba(165, 42, 42, 0.02) 100%);
+  border-radius: 1rem;
+  border: 1px solid rgba(139, 0, 0, 0.1);
+`;
+
+export const PackageListTitle = styled.h3`
+  color: var(--light-bordo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+`;
+
+export const PackageList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+`;
+
+export const PackageListItem = styled.li`
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  border-left: 3px solid var(--light-bordo);
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    background: rgba(139, 0, 0, 0.1);
+    transform: translateX(5px);
+  }
+
+  &::before {
+    content: '✓';
+    color: var(--light-bordo);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+`;

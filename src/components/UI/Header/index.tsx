@@ -11,7 +11,7 @@ import {
   MobileOverlay,
 } from './styles';
 import dolet_logo from '../../../../public/images/dolet_logo.png';
-import logodolet from '../../../../public/images/logodolet.png';
+import logodolet from '../../../../public/images/logodolet3.png';
 import ic_bars from '../../../../public/svgs/ic_bars.svg';
 import AnimatedLink from '@/components/Common/AnimatedLink';
 import Link from 'next/link';

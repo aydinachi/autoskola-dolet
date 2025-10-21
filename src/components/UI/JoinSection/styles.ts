@@ -60,7 +60,7 @@ export const Testimonial = styled.div`
 `;
 
 export const Testimony = styled.p`
-  color: #292929;
+  color: #d9d9d9;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2rem;
@@ -94,7 +94,7 @@ export const Name = styled.div`
   }
 
   p {
-    color: #292929;
+    color: #d9d9d9;
     font-size: 0.875rem;
     font-weight: 400;
   }

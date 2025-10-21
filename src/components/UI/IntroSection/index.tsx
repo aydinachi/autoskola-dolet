@@ -14,6 +14,10 @@ import {
   LeftImage,
   MiddleImage,
   RightImage,
+  PackageListContainer,
+  PackageListTitle,
+  PackageList,
+  PackageListItem,
 } from './styles';
 import { MaskText } from '@/components';
 import { useIsMobile } from '../../../../libs/useIsMobile';
@@ -23,6 +27,7 @@ import {
   edges,
   mobileHeaderPhrase,
   mobileParagraphPhrase,
+  packageIncludes,
 } from './constants';
 
 const IntroSection = () => {
@@ -73,6 +78,17 @@ const IntroSection = () => {
             </Edge>
           ))}
         </Edges>
+        
+        <PackageListContainer>
+          <PackageListTitle>Program polaganja obuhvata:</PackageListTitle>
+          <PackageList>
+            {packageIncludes.map((item, index) => (
+              <PackageListItem key={index}>
+                {item}
+              </PackageListItem>
+            ))}
+          </PackageList>
+        </PackageListContainer>
       </Inner>
     </Wrapper>
   );

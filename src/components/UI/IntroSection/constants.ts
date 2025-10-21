@@ -20,21 +20,30 @@ export const mobileParagraphPhrase = [
 
 export const edges = [
   {
-    point: 'Teorijska obuka',
+    point: 'Program Prve pomoći',
     details:
-      'Naši novi kursevi dolaze opremljeni sa najnovijim metodama teorijske obuke, omogućavajući vam brzo i sigurno učenje sa jednostavnim pristupom.',
+      'Kompletna obuka iz prve pomoći sa praktičnim vježbama i certifikatom. Uključuje ispit iz prve pomoći.',
     icon: ic_document_duplicate,
   },
   {
-    point: 'Personalizovana obuka',
+    point: 'Poznavanje propisa o bezbjednosti',
     details:
-      'Prilagodite svoju obuku da odražava vaš jedinstveni stil učenja. Biramo između niza pristupa koji odgovaraju vašoj ličnosti.',
+      '28 nastavnih časova iz poznavanja propisa o bezbjednosti saobraćaja na putevima sa ispitom.',
     icon: ic_identification,
   },
   {
-    point: 'Povećana sigurnost',
+    point: 'Upravljanje motornim vozilom',
     details:
-      'Vaša sigurnost je naš prioritet. Naši kursevi sadrže napredne sigurnosne mere za zaštitu vašeg učenja i podataka.',
+      '35 časova praktične obuke upravljanja motornim vozilom sa ispitom iz upravljanja motornim vozilom.',
     icon: ic_lock_closed,
   },
+];
+
+export const packageIncludes = [
+  'Program Prve pomoći',
+  'Ispit iz Prve pomoći',
+  '28 nastavnih časova iz poznavanja propisa o bezbjednosti saobraćaja na putevima',
+  'Ispit iz Poznavanja propisa o bezbjednosti saobraćaja na putevima',
+  '35 časova upravljanja m/v',
+  'Ispit iz upravljanja motornim vozilom'
 ];
