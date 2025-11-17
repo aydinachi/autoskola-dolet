@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { styled } from 'styled-components';
+import { styled, css } from 'styled-components';
 import Link from 'next/link';
 import { testFolders, TestFolder, Question } from './constants';
 
@@ -29,7 +29,7 @@ const QuizHeader = styled.div`
   }
 `;
 
-const BackButton = styled(Link)`
+const backButtonStyles = css`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -45,6 +45,16 @@ const BackButton = styled(Link)`
   &:hover {
     background: var(--light-bordo);
   }
+`;
+
+const BackButton = styled.button`
+  ${backButtonStyles};
+  border: none;
+  cursor: pointer;
+`;
+
+const BackButtonLink = styled(Link)`
+  ${backButtonStyles};
 `;
 
 const QuestionCard = styled.div`
@@ -450,9 +460,9 @@ export default function OnlineUcenje() {
   return (
     <QuizContainer>
       <QuizHeader>
-        <BackButton href="/">
+        <BackButtonLink href="/">
           ← Povratak na početnu
-        </BackButton>
+        </BackButtonLink>
         <h1>Online učenje - B kategorija</h1>
         <p>Odaberite test kategoriju i testirajte svoje znanje sa našim kviz pitanjima</p>
       </QuizHeader>
