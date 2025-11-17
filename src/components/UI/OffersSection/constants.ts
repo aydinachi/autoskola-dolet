@@ -1,49 +1,35 @@
-import theory_education from '../../../../public/images/theory_education.svg';
-import practical_driving from '../../../../public/images/practical_driving.svg';
-import driving_instructor from '../../../../public/images/driving_instructor.svg';
-import exam_preparation from '../../../../public/images/exam_preparation.svg';
-import { Span } from '@/components/Common/AnimatedLink/styles';
-// For desktop
 export const desktopHeaderPhrases = [
- 
-  'Vaša vožnja počinje ovdje.',
-  
-];
-export const desktopParagraphPhrase = [
-  'Od teorijske obuke do praktične vožnje, mi smo tu za vas. ',
-  'Pridružite nam se i otključajte svoj potencijal danas.',
+  'Auto Škola DOLET – Profesionalna obuka za vozače',
 ];
 
-// For mobile
-export const mobileParagraphPhrase = [
-  'Auto škola Dolet nudi svijet vozačkih mogućnosti.',
-  
-  'Pridružite nam se i otključajte svoj potencijal danas.',
+export const introParagraphs = [
+  'Dobrodošli u Auto Školu DOLET – mjesto gdje se samopouzdanje za volanom gradi kroz stručnu podršku i sigurnu obuku.',
+  'Naša misija je jednostavna: spoj teorije i prakse pretvaramo u jasne korake ka dozvoli, bez stresa i skrivenih troškova.',
 ];
 
-export const offers = [
+export const infoSections = [
   {
-    illustration: theory_education,
+    title: 'O nama',
+    body: 'Prisutan u Sarajevu od 1977. (nekada Polet), DOLET je sinonim za povjerenje. Savremena vozila, mentori s iskustvom i cijena od 1.480 KM uz mogućnost rata čine obuku transparentnom od prvog dana.',
+  },
+  {
     title: 'Teorijska obuka',
-    details:
-      'Uživajte u sigurnoj, besprijekornoj teorijskoj obuci koja čini učenje pravila saobraćaja jednostavnim.',
+    body: 'U partnerstvu s Centrom za edukaciju prolazite kroz propise, znakove i realne situacije kroz sažeta predavanja i praktične primjere – sve što je potrebno da test iznenadi nikoga.',
   },
   {
-    illustration: practical_driving,
     title: 'Praktična vožnja',
-    details:
-      'Razvijajte svoje vozačke vještine sa pouzdanjem sa našim personalizovanim rješenjima obuke, prilagođenim vašim ciljevima.',
+    body: '35 časova individualne vožnje vode instruktori koji smiruju tremu i prenose rutinu sigurne vožnje. Napredujete tempom koji odgovara vama, na vozilima koja su spremna za svaki scenario.',
   },
   {
-    illustration: driving_instructor,
-    title: 'Stručni instruktori',
-    details:
-      'Donosite informirane odluke za svoju vozačku budućnost sa našim stručnim znanjem upravljanja obukom.',
+    title: 'Prva pomoć',
+    body: 'Kandidate vodimo kroz organizaciju i polaganje teorijskog dijela prve pomoći u ovlaštenim centrima, uz jasne upute i termine bez dodatnog stresa.',
   },
-  {
-    illustration: exam_preparation,
-    title: 'Priprema za ispit',
-    details:
-      'Ostvarite svoje vozačke snove sa našim sveobuhvatnim uslugama planiranja obuke, vodeći vas prema sigurnoj budućnosti.',
-  },
+];
+
+export const reasons = [
+  'Stručni instruktori i savremena vozila spremna za praksu.',
+  'Teorijska obuka uz Centar za edukaciju i provjerene materijale.',
+  '35 časova praktične vožnje uz fleksibilan, individualan plan.',
+  'Transparentna cijena – 1.480 KM, bez skrivenih troškova, uz rate.',
+  'Fleksibilni termini i visoka prolaznost kandidata.',
 ];

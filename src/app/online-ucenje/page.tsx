@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { styled } from 'styled-components';
 import Link from 'next/link';
+import { testFolders, TestFolder, Question } from './constants';
 
 const QuizContainer = styled.div`
   min-height: 100vh;
@@ -167,60 +168,130 @@ const HomeButton = styled(Link)`
   }
 `;
 
-interface Question {
-  id: number;
-  question: string;
-  options: string[];
-  correctAnswer: number;
-  explanation: string;
-}
+const FoldersContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+`;
 
-const questions: Question[] = [
-  {
-    id: 1,
-    question: "Koja je maksimalna brzina u naselju?",
-    options: ["30 km/h", "50 km/h", "60 km/h", "80 km/h"],
-    correctAnswer: 1,
-    explanation: "Maksimalna brzina u naselju je 50 km/h, osim ako nije drugačije označeno."
-  },
-  {
-    id: 2,
-    question: "Kada je obavezno koristiti sigurnosni pojas?",
-    options: ["Samo na autoputu", "Samo u gradu", "Uvijek kada se vozi", "Samo na brzini preko 50 km/h"],
-    correctAnswer: 2,
-    explanation: "Sigurnosni pojas je obavezan uvijek kada se vozi, bez obzira na brzinu ili tip ceste."
-  },
-  {
-    id: 3,
-    question: "Koja je minimalna udaljenost za preticanje?",
-    options: ["50 metara", "100 metara", "150 metara", "200 metara"],
-    correctAnswer: 2,
-    explanation: "Minimalna udaljenost za preticanje je 150 metara, osim ako nije drugačije označeno."
-  },
-  {
-    id: 4,
-    question: "Kada je zabranjeno preticanje?",
-    options: ["Na pješačkom prelazu", "U krivini", "Na željezničkom prelazu", "Sve navedeno"],
-    correctAnswer: 3,
-    explanation: "Preticanje je zabranjeno na pješačkom prelazu, u krivini i na željezničkom prelazu."
-  },
-  {
-    id: 5,
-    question: "Koja je maksimalna brzina na autoputu?",
-    options: ["100 km/h", "120 km/h", "130 km/h", "140 km/h"],
-    correctAnswer: 2,
-    explanation: "Maksimalna brzina na autoputu je 130 km/h, osim ako nije drugačije označeno."
+const FolderCard = styled.div`
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 2px solid rgba(139, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(139, 0, 0, 0.4);
+    border-color: var(--light-bordo);
   }
-];
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(165, 42, 42, 0.05) 100%);
+    border-radius: 1rem;
+    pointer-events: none;
+  }
+`;
+
+const FolderIcon = styled.div`
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--bordo) 0%, var(--light-bordo) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+`;
+
+const FolderTitle = styled.h3`
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+`;
+
+const FolderDescription = styled.p`
+  color: var(--link-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+`;
+
+const FolderStats = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-bordo);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+`;
+
+const StartTestButton = styled.button`
+  background: linear-gradient(135deg, var(--bordo) 0%, var(--light-bordo) 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139, 0, 0, 0.4);
+  }
+`;
+
 
 export default function OnlineUcenje() {
+  const [currentFolder, setCurrentFolder] = useState<TestFolder | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
   const [showResults, setShowResults] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
 
+  const handleFolderSelect = (folder: TestFolder) => {
+    setCurrentFolder(folder);
+    setCurrentQuestion(0);
+    setSelectedAnswers([]);
+    setShowResults(false);
+    setShowExplanation(false);
+  };
+
+  const handleBackToFolders = () => {
+    setCurrentFolder(null);
+    setCurrentQuestion(0);
+    setSelectedAnswers([]);
+    setShowResults(false);
+    setShowExplanation(false);
+  };
+
   const handleAnswerSelect = (answerIndex: number) => {
-    if (showResults) return;
+    if (showResults || !currentFolder) return;
     
     const newAnswers = [...selectedAnswers];
     newAnswers[currentQuestion] = answerIndex;
@@ -228,7 +299,9 @@ export default function OnlineUcenje() {
   };
 
   const handleNext = () => {
-    if (currentQuestion < questions.length - 1) {
+    if (!currentFolder) return;
+    
+    if (currentQuestion < currentFolder.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setShowExplanation(false);
     } else {
@@ -248,6 +321,8 @@ export default function OnlineUcenje() {
   };
 
   const handleRestart = () => {
+    if (!currentFolder) return;
+    
     setCurrentQuestion(0);
     setSelectedAnswers([]);
     setShowResults(false);
@@ -255,8 +330,10 @@ export default function OnlineUcenje() {
   };
 
   const calculateScore = () => {
+    if (!currentFolder) return 0;
+    
     let correct = 0;
-    questions.forEach((question, index) => {
+    currentFolder.questions.forEach((question, index) => {
       if (selectedAnswers[index] === question.correctAnswer) {
         correct++;
       }
@@ -265,26 +342,30 @@ export default function OnlineUcenje() {
   };
 
   const isCorrect = (questionIndex: number, answerIndex: number) => {
-    return questions[questionIndex].correctAnswer === answerIndex;
+    if (!currentFolder) return false;
+    return currentFolder.questions[questionIndex].correctAnswer === answerIndex;
   };
 
   const isSelected = (answerIndex: number) => {
     return selectedAnswers[currentQuestion] === answerIndex;
   };
 
-  if (showResults) {
+  if (showResults && currentFolder) {
     const score = calculateScore();
-    const percentage = Math.round((score / questions.length) * 100);
+    const percentage = Math.round((score / currentFolder.questions.length) * 100);
     
     return (
       <QuizContainer>
         <QuizHeader>
-          <h1>Online učenje - auto škola Dolet</h1>
+          <BackButton onClick={handleBackToFolders}>
+            ← Povratak na foldere
+          </BackButton>
+          <h1>Rezultat kviza - {currentFolder.name}</h1>
         </QuizHeader>
         
         <ScoreCard>
           <h2>Rezultat kviza</h2>
-          <p>Osvojili ste {score} od {questions.length} tačnih odgovora</p>
+          <p>Osvojili ste {score} od {currentFolder.questions.length} tačnih odgovora</p>
           <p>Procenat: {percentage}%</p>
           <p>
             {percentage >= 80 ? 'Odličan rezultat! 🎉' : 
@@ -304,63 +385,91 @@ export default function OnlineUcenje() {
     );
   }
 
+  if (currentFolder) {
+    return (
+      <QuizContainer>
+        <QuizHeader>
+          <BackButton onClick={handleBackToFolders}>
+            ← Povratak na foldere
+          </BackButton>
+          <h1>{currentFolder.name}</h1>
+          <p>{currentFolder.description}</p>
+        </QuizHeader>
+
+        <QuestionCard>
+          <QuestionText>
+            Pitanje {currentQuestion + 1} od {currentFolder.questions.length}: {currentFolder.questions[currentQuestion].question}
+          </QuestionText>
+          
+          <OptionsContainer>
+            {currentFolder.questions[currentQuestion].options.map((option, index) => (
+              <OptionButton
+                key={index}
+                selected={isSelected(index)}
+                correct={showExplanation && isCorrect(currentQuestion, index)}
+                wrong={showExplanation && isSelected(index) && !isCorrect(currentQuestion, index)}
+                onClick={() => handleAnswerSelect(index)}
+              >
+                {option}
+              </OptionButton>
+            ))}
+          </OptionsContainer>
+
+          {showExplanation && (
+            <div style={{ marginTop: '1rem', padding: '1rem', background: '#2a2a2a', borderRadius: '0.5rem' }}>
+              <p><strong>Objašnjenje:</strong> {currentFolder.questions[currentQuestion].explanation}</p>
+            </div>
+          )}
+        </QuestionCard>
+
+        <NavigationButtons>
+          <NavButton 
+            onClick={handlePrevious} 
+            disabled={currentQuestion === 0}
+          >
+            Prethodno
+          </NavButton>
+          
+          {!showExplanation ? (
+            <NavButton 
+              onClick={handleShowExplanation}
+              disabled={selectedAnswers[currentQuestion] === undefined}
+            >
+              Pokaži objašnjenje
+            </NavButton>
+          ) : (
+            <NavButton onClick={handleNext}>
+              {currentQuestion === currentFolder.questions.length - 1 ? 'Završi kviz' : 'Sljedeće'}
+            </NavButton>
+          )}
+        </NavigationButtons>
+      </QuizContainer>
+    );
+  }
+
   return (
     <QuizContainer>
       <QuizHeader>
         <BackButton href="/">
           ← Povratak na početnu
         </BackButton>
-        <h1>Online učenje - auto škola Dolet</h1>
-        <p>Testirajte svoje znanje sa našim kviz pitanjima</p>
+        <h1>Online učenje - B kategorija</h1>
+        <p>Odaberite test kategoriju i testirajte svoje znanje sa našim kviz pitanjima</p>
       </QuizHeader>
 
-      <QuestionCard>
-        <QuestionText>
-          Pitanje {currentQuestion + 1} od {questions.length}: {questions[currentQuestion].question}
-        </QuestionText>
-        
-        <OptionsContainer>
-          {questions[currentQuestion].options.map((option, index) => (
-            <OptionButton
-              key={index}
-              selected={isSelected(index)}
-              correct={showExplanation && isCorrect(currentQuestion, index)}
-              wrong={showExplanation && isSelected(index) && !isCorrect(currentQuestion, index)}
-              onClick={() => handleAnswerSelect(index)}
-            >
-              {option}
-            </OptionButton>
-          ))}
-        </OptionsContainer>
-
-        {showExplanation && (
-          <div style={{ marginTop: '1rem', padding: '1rem', background: '#2a2a2a', borderRadius: '0.5rem' }}>
-            <p><strong>Objašnjenje:</strong> {questions[currentQuestion].explanation}</p>
-          </div>
-        )}
-      </QuestionCard>
-
-      <NavigationButtons>
-        <NavButton 
-          onClick={handlePrevious} 
-          disabled={currentQuestion === 0}
-        >
-          Prethodno
-        </NavButton>
-        
-        {!showExplanation ? (
-          <NavButton 
-            onClick={handleShowExplanation}
-            disabled={selectedAnswers[currentQuestion] === undefined}
-          >
-            Pokaži objašnjenje
-          </NavButton>
-        ) : (
-          <NavButton onClick={handleNext}>
-            {currentQuestion === questions.length - 1 ? 'Završi kviz' : 'Sljedeće'}
-          </NavButton>
-        )}
-      </NavigationButtons>
+      <FoldersContainer>
+        {testFolders.map((folder) => (
+          <FolderCard key={folder.id} onClick={() => handleFolderSelect(folder)}>
+            <FolderIcon>📁</FolderIcon>
+            <FolderTitle>{folder.name}</FolderTitle>
+            <FolderDescription>{folder.description}</FolderDescription>
+            <FolderStats>
+              <span>{folder.questions.length} pitanja</span>
+              <StartTestButton>Započni test</StartTestButton>
+            </FolderStats>
+          </FolderCard>
+        ))}
+      </FoldersContainer>
     </QuizContainer>
   );
 }

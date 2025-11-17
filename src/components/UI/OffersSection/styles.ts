@@ -1,6 +1,5 @@
 'use client';
 import { styled } from 'styled-components';
-import grid_background from '../../../../public/images/offer_card_grid_1.png';
 
 export const Wrapper = styled.section``;
 
@@ -69,162 +68,111 @@ export const Header = styled.header`
   }
 `;
 
-export const ImageCtn = styled.div`
-  margin: 3rem auto 0;
-  position: relative;
-  display: flex;
-
-  &::after {
-    position: absolute;
-    content: '';
-    height: 13.4375rem;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(19, 19, 19, 0) 0%, #131313 100%);
-    left: 0;
-    top: 50px;
-  }
-
-  img {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  @media (max-width: 768px) {
-    margin: 0.32rem auto 0;
-
-    &::after {
-      top: 30px;
-    }
-
-    img {
-      width: 90%;
-      margin: 0 auto;
-      object-fit: contain;
-    }
-  }
-`;
-
-export const TextCtn = styled.div`
-  padding: 2.5rem;
-  padding-top: 3.25rem;
-  max-width: 32.25rem;
+export const IntroText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: auto;
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
 
-  h2 {
-    font-size: 2rem;
+  p {
+    color: #dedede;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  }
+`;
+
+export const ContentGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem auto 0;
+  max-width: 1100px;
+`;
+
+export const InfoCard = styled.article`
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(19, 19, 19, 0.85);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+
+  h3 {
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.75rem;
+    margin: 0;
   }
 
   p {
-    color: var(--link-color);
+    color: #c7c7c7;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
+    margin: 0;
+  }
+`;
+
+export const ReasonsCard = styled.article`
+  margin: 3rem auto 0;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.25), rgba(19, 19, 19, 0.9));
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  max-width: 1100px;
+
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
-    h2 {
-      font-size: 1.5rem;
+    padding: 1.75rem;
+
+    h3 {
+      font-size: 1.4rem;
     }
   }
 `;
 
-export const Offers = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+export const ReasonsList = styled.ul`
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem 2rem;
+  padding: 0;
+  margin: 0;
 
-  &:last-child {
-    margin-top: 2rem;
-
-    div:first-child {
-      flex: 1;
-
-      ${ImageCtn} {
-        margin-top: 5.7rem;
-        flex: 2;
-      }
-
-      ${TextCtn} {
-        height: 1em;
-        flex: 1;
-      }
-    }
-
-    div:last-child {
-      flex: 2;
-
-      ${ImageCtn} {
-        margin-top: 5.7rem;
-        flex: 2;
-        margin-left: auto;
-      }
-
-      ${TextCtn} {
-        height: 1em;
-        flex: 1;
-      }
-    }
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: #f5f5f5;
   }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-
-    &:last-child {
-      div:first-child {
-        flex: 1;
-
-        ${ImageCtn} {
-          margin-top: 4.78rem;
-          flex: 1;
-        }
-
-        ${TextCtn} {
-          margin-top: 4rem;
-        }
-      }
-
-      div:last-child {
-        flex: 1;
-
-        ${ImageCtn} {
-          margin-top: 5.7rem;
-          flex: 1;
-          margin-left: auto;
-        }
-
-        ${TextCtn} {
-          margin-top: 2rem;
-        }
-      }
-    }
-  }
-`;
-
-export const OfferCard = styled.div`
-  overflow: hidden;
-  height: 31.25rem;
-  border-radius: 0.75rem;
-  border: 1px solid var(--stroke, rgba(255, 255, 255, 0.04));
-  display: flex;
-  flex-direction: column;
-  background: url(${grid_background.src}) #131313 no-repeat;
-
-  &:first-child {
-    flex: 2;
-  }
-
-  &:nth-child(2) {
-    flex: 1;
-
-    ${ImageCtn} {
-      margin-left: 2.5rem;
-      width: 100%;
-    }
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    background: #f7c04a;
   }
 `;

@@ -1,6 +1,5 @@
 import {
   FAQ,
-  Featured,
   FinancialFuture,
   FinancilaFreedom,
   HeroSection,
@@ -16,7 +15,6 @@ export default function Home() {
         <HeroSection />
       </section>
       <section id="kursevi">
-        <Featured />
         <OffersSection />
       </section>
       <section id="prednosti">

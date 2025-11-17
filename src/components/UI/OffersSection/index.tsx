@@ -1,65 +1,52 @@
 'use client';
-import Image from 'next/image';
 import {
   Wrapper,
   Inner,
   Header,
   SectionLabel,
-  Offers,
-  OfferCard,
-  ImageCtn,
-  TextCtn,
+  IntroText,
+  ContentGrid,
+  InfoCard,
+  ReasonsCard,
+  ReasonsList,
 } from './styles';
 import MaskText from '@/components/Common/MaskText';
-import { useIsMobile } from '../../../../libs/useIsMobile';
 import {
   desktopHeaderPhrases,
-  desktopParagraphPhrase,
-  mobileParagraphPhrase,
-  offers,
+  introParagraphs,
+  infoSections,
+  reasons,
 } from './constants';
 
 const OffersSection = () => {
-  const isMobile = useIsMobile();
   return (
     <Wrapper>
       <Inner>
         <Header>
-          <SectionLabel>O nama</SectionLabel>
+          <SectionLabel>Auto škola DOLET</SectionLabel>
           <MaskText phrases={desktopHeaderPhrases} tag="h1" />
-
-          {isMobile ? (
-            <MaskText phrases={mobileParagraphPhrase} tag="p" />
-          ) : (
-            <MaskText phrases={desktopParagraphPhrase} tag="p" />
-          )}
+          <IntroText>
+            {introParagraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </IntroText>
         </Header>
-        <Offers>
-          {offers.slice(0, 2).map((offer, i) => (
-            <OfferCard key={i}>
-              <ImageCtn>
-                <Image src={offer.illustration} alt="illustration" />
-              </ImageCtn>
-              <TextCtn>
-                <MaskText phrases={new Array(offer.title)} tag="h2" />
-                <p>{offer.details}</p>
-              </TextCtn>
-            </OfferCard>
+        <ContentGrid>
+          {infoSections.map((section, index) => (
+            <InfoCard key={index}>
+              <h3>{section.title}</h3>
+              <p>{section.body}</p>
+            </InfoCard>
           ))}
-        </Offers>
-        <Offers>
-          {offers.slice(2, 4).map((offer, i) => (
-            <OfferCard key={i}>
-              <ImageCtn>
-                <Image src={offer.illustration} alt="illustration" />
-              </ImageCtn>
-              <TextCtn>
-                <MaskText phrases={new Array(offer.title)} tag="h2" />
-                <p>{offer.details}</p>
-              </TextCtn>
-            </OfferCard>
-          ))}
-        </Offers>
+        </ContentGrid>
+        <ReasonsCard>
+          <h3>Zašto izabrati Auto Školu DOLET?</h3>
+          <ReasonsList>
+            {reasons.map((reason, index) => (
+              <li key={index}>{reason}</li>
+            ))}
+          </ReasonsList>
+        </ReasonsCard>
       </Inner>
     </Wrapper>
   );
